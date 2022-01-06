@@ -772,6 +772,7 @@ export default async function main(args) {
     appName: APP_NAME,
     appVersion: APP_VERSION,
     config,
+    express,
     safeMode,
   })
 
