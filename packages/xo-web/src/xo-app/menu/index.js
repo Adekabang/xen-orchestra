@@ -307,39 +307,39 @@ export default class Menu extends Component {
           },
         ],
       },
-      {
-        to: isAdmin ? 'xoa/update' : 'xoa/notifications',
-        icon: 'menu-xoa',
-        label: 'xoa',
-        extra: [
-          !isAdmin || xoaState === 'upToDate' ? null : <UpdateTag key='update' />,
-          noNotifications ? null : <NotificationTag key='notification' />,
-        ],
-        subMenu: [
-          isAdmin && {
-            to: 'xoa/update',
-            icon: 'menu-update',
-            label: 'updatePage',
-            extra: <UpdateTag />,
-          },
-          isAdmin && {
-            to: 'xoa/licenses',
-            icon: 'menu-license',
-            label: 'licensesPage',
-          },
-          {
-            to: 'xoa/notifications',
-            icon: 'menu-notification',
-            label: 'notificationsPage',
-            extra: <NotificationTag />,
-          },
-          isAdmin && {
-            to: 'xoa/support',
-            icon: 'menu-support',
-            label: 'supportPage',
-          },
-        ],
-      },
+      // {
+      //   to: isAdmin ? 'xoa/update' : 'xoa/notifications',
+      //   icon: 'menu-xoa',
+      //   label: 'xoa',
+      //   extra: [
+      //     !isAdmin || xoaState === 'upToDate' ? null : <UpdateTag key='update' />,
+      //     noNotifications ? null : <NotificationTag key='notification' />,
+      //   ],
+      //   subMenu: [
+      //     isAdmin && {
+      //       to: 'xoa/update',
+      //       icon: 'menu-update',
+      //       label: 'updatePage',
+      //       extra: <UpdateTag />,
+      //     },
+      //     isAdmin && {
+      //       to: 'xoa/licenses',
+      //       icon: 'menu-license',
+      //       label: 'licensesPage',
+      //     },
+      //     {
+      //       to: 'xoa/notifications',
+      //       icon: 'menu-notification',
+      //       label: 'notificationsPage',
+      //       extra: <NotificationTag />,
+      //     },
+      //     isAdmin && {
+      //       to: 'xoa/support',
+      //       icon: 'menu-support',
+      //       label: 'supportPage',
+      //     },
+      //   ],
+      // },
       isAdmin && {
         to: '/settings/servers',
         icon: 'menu-settings',
@@ -416,47 +416,47 @@ export default class Menu extends Component {
           },
         ],
       },
-      isAdmin && {
-        to: '/hub/templates',
-        icon: 'menu-hub',
-        label: 'hubPage',
-        subMenu: [
-          {
-            to: '/hub/templates',
-            icon: 'hub-template',
-            label: 'templatesLabel',
-          },
-          {
-            to: '/hub/recipes',
-            icon: 'hub-recipe',
-            label: 'recipesLabel',
-          },
-        ],
-      },
-      isAdmin && {
-        to: '/proxies',
-        icon: 'proxy',
-        label: 'proxies',
-        extra: [
-          this._areProxiesOutOfDate() ? (
-            <Tooltip content={_('proxiesNeedUpgrade')}>
-              <StackedIcons
-                icons={[
-                  { color: 'text-success', icon: 'circle', size: 2 },
-                  { icon: 'menu-update', size: 1 },
-                ]}
-              />
-            </Tooltip>
-          ) : null,
-        ],
-      },
-      isAdmin && { to: '/about', icon: 'menu-about', label: 'aboutPage' },
-      !noOperatablePools && {
-        to: '/tasks',
-        icon: 'task',
-        label: 'taskMenu',
-        pill: nTasks,
-      },
+      // isAdmin && {
+      //   to: '/hub/templates',
+      //   icon: 'menu-hub',
+      //   label: 'hubPage',
+      //   subMenu: [
+      //     {
+      //       to: '/hub/templates',
+      //       icon: 'hub-template',
+      //       label: 'templatesLabel',
+      //     },
+      //     {
+      //       to: '/hub/recipes',
+      //       icon: 'hub-recipe',
+      //       label: 'recipesLabel',
+      //     },
+      //   ],
+      // },
+      // isAdmin && {
+      //   to: '/proxies',
+      //   icon: 'proxy',
+      //   label: 'proxies',
+      //   extra: [
+      //     this._areProxiesOutOfDate() ? (
+      //       <Tooltip content={_('proxiesNeedUpgrade')}>
+      //         <StackedIcons
+      //           icons={[
+      //             { color: 'text-success', icon: 'circle', size: 2 },
+      //             { icon: 'menu-update', size: 1 },
+      //           ]}
+      //         />
+      //       </Tooltip>
+      //     ) : null,
+      //   ],
+      // },
+      // isAdmin && { to: '/about', icon: 'menu-about', label: 'aboutPage' },
+      // !noOperatablePools && {
+      //   to: '/tasks',
+      //   icon: 'task',
+      //   label: 'taskMenu',
+      //   pill: nTasks,
+      // },
       // isAdmin && { to: '/xosan', icon: 'menu-xosan', label: 'xosan' },
       // !noOperatablePools && {
       //   to: '/import/vm',
