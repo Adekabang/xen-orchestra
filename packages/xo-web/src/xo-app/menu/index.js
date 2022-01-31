@@ -518,8 +518,8 @@ export default class Menu extends Component {
             </a>
           </li>
           {map(items, (item, index) => item && <MenuLinkItem key={index} item={item} />)}
-          <li>&nbsp;</li>
-          <li>&nbsp;</li>
+          {/* <li>&nbsp;</li>
+          <li>&nbsp;</li> */}
           {!state.isXoaStatusOk && (
             <li className='nav-item xo-menu-item'>
               <Link className='nav-link' style={LINK_STYLE} to='/xoa/support'>
@@ -566,8 +566,8 @@ export default class Menu extends Component {
               </Link>
             </li>
           )} */}
-          <li>&nbsp;</li>
-          <li>&nbsp;</li>
+          {/* <li>&nbsp;</li>
+          <li>&nbsp;</li> */}
           <li className='nav-item xo-menu-item'>
             <a className='nav-link' onClick={this._signOut} href='#'>
               <Icon icon='sign-out' size='lg' fixedWidth />
