@@ -507,8 +507,8 @@ export default class Menu extends Component {
           <li>
             <span>
               <a className={styles.brand} href='#'>
-                <span className={styles.hiddenUncollapsed}>XO</span>
-                <span className={styles.hiddenCollapsed}>Xen Orchestra</span>
+                <span className={styles.hiddenUncollapsed}>RO</span>
+                <span className={styles.hiddenCollapsed}>RISS Orchestra</span>
               </a>
             </span>
           </li>
