@@ -457,24 +457,24 @@ export default class Menu extends Component {
         label: 'taskMenu',
         pill: nTasks,
       },
-      isAdmin && { to: '/xosan', icon: 'menu-xosan', label: 'xosan' },
-      !noOperatablePools && {
-        to: '/import/vm',
-        icon: 'menu-new-import',
-        label: 'newImport',
-        subMenu: [
-          {
-            to: '/import/vm',
-            icon: 'vm',
-            label: 'labelVm',
-          },
-          {
-            to: '/import/disk',
-            icon: 'disk',
-            label: 'labelDisk',
-          },
-        ],
-      },
+      // isAdmin && { to: '/xosan', icon: 'menu-xosan', label: 'xosan' },
+      // !noOperatablePools && {
+      //   to: '/import/vm',
+      //   icon: 'menu-new-import',
+      //   label: 'newImport',
+      //   subMenu: [
+      //     {
+      //       to: '/import/vm',
+      //       icon: 'vm',
+      //       label: 'labelVm',
+      //     },
+      //     {
+      //       to: '/import/disk',
+      //       icon: 'disk',
+      //       label: 'labelDisk',
+      //     },
+      //   ],
+      // },
       !(noOperatablePools && noResourceSets) && {
         to: '/vms/new',
         icon: 'menu-new',
