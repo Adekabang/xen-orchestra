@@ -180,7 +180,7 @@ export default class XoApp extends Component {
   componentDidMount() {
     this.refs.bodyWrapper.style.minHeight = this.refs.menu.getWrappedInstance().height + 'px'
     if (+process.env.XOA_PLAN === 5) {
-      this.displayOpenSourceDisclaimer()
+      //this.displayOpenSourceDisclaimer()
     }
   }
 
@@ -264,7 +264,7 @@ export default class XoApp extends Component {
                   <Link to='/xoa/update'>{_('notRegisteredDisclaimerRegister')}</Link>
                 </div>
               )}
-              {plan === 'Community' && !this.state.dismissedSourceBanner && (
+              {/* {plan === 'Community' && !this.state.dismissedSourceBanner && (
                 <div className='alert alert-danger mb-0'>
                   <a
                     href='https://xen-orchestra.com/#!/xoa?pk_campaign=xo_source_banner'
@@ -284,7 +284,7 @@ export default class XoApp extends Component {
                     &times;
                   </button>
                 </div>
-              )}
+              )} */}
               {isTrialRunning(trial.trial) && !this.state.dismissedTrialBanner && (
                 <div className='alert alert-info mb-0'>
                   {_('trialLicenseInfo', {
